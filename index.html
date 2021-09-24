@@ -52,7 +52,10 @@
 <div class="row">
 <div class="col-md-12 col-sm-12 divblk">
 <div class="form-block effect2">
-<form action="https://partsapi.tk/post_form" class="form-custom" method="POST" name="qapform" onsubmit="return chkForm();">
+	<form action="javascript:sendmail()" method="post" class="form-custom">
+	
+<!--form action="https://partsapi.tk/post_form" class="form-custom" method="POST" name="qapform" onsubmit="return chkForm();" -->
+	
 <div class="col-md-6 col-sm-12 float-left">
 <div class="form-group row"><img alt="Arrow for Required" class="arrowrequired makearraow" src="images/arrow.png" /> <label class="col-2 col-form-label" for="make">Make <span class="text-danger">*</span></label>
 	<div class="col-10"><input class="form-control borderred" id="name" name="name" placeholder="Make" type="text" /></div>	
@@ -90,11 +93,15 @@
 
 <div class="form-group row"><span class="custziparrow custarrows  d-none"><img alt="Arrow for Required" class="arrowrequired2  mbl" src="images/arrow.png" /> <img alt="Arrow for Required" class="arrowrequiredrght dsk" src="images/arrow-right.png" /> </span> <label class="col-2 col-form-label" for="zip">Zip <span class="text-danger">*</span></label>
 
-<div class="col-10"><input class="form-control borderred" id="zip" name="zip" placeholder="Enter Zip/Postal Code" type="text" /></div>
+<div class="col-10"><input class="form-control borderred" id="zip" name="zip" placeholder="Enter Zip/Postal Code" type="text" /></div>	
 </div>
+	
+	<input type="hidden" id="note" name="note" value="Note : This email and all of the information within is property of the direct recipient only and may not be
+																	distributed to or shared with any other party. The recipient also is bound by richdogpartlocator.com LLC terms of service.
+																	Violators will be permanently removed from our services">
 
 <div class="form-group row">
-<div class="col-md-10 offset-md-2 col-sm-12 text-right"><input class="input" id="optionno" name="optionno" type="hidden" /><button class="btn btn-custom red-border" type="submit">Find My Part Now</button></div>
+<div class="col-md-10 offset-md-2 col-sm-12 text-right"><input class="input" id="optionno" name="optionno" type="hidden" /><button class="btn btn-custom red-border" type="submit" value="submit">Find My Part Now</button></div>
 </div>
 </div>
 </form>

@@ -58,19 +58,19 @@
 	
 <div class="col-md-6 col-sm-12 float-left">
 <div class="form-group row"><img alt="Arrow for Required" class="arrowrequired makearraow" src="images/arrow.png" /> <label class="col-2 col-form-label" for="make">Make <span class="text-danger">*</span></label>
-	<div class="col-10"><input class="form-control borderred" id="name" name="name" placeholder="Make" type="text" /></div>	
+	<div class="col-10"><input class="form-control borderred" id="ddlmake" name="ddlmake" placeholder="Make" type="text" /></div>	
 </div>
 
 <div class="form-group row"><img alt="Arrow for Required" class="arrowrequired modelarrow d-none" src="images/arrow.png" /> <label class="col-2 col-form-label" for="modelid">Model <span class="text-danger">*</span></label>
-<div class="col-10"><input class="form-control borderred" id="name" name="name" placeholder="Model" type="text" /></div>
+<div class="col-10"><input class="form-control borderred" id="ddlmodel" name="ddlmodel" placeholder="Model" type="text" /></div>
 </div>
 
 <div class="form-group row"><img alt="Arrow for Required" class="arrowrequired partarrow d-none" src="images/arrow.png" /> <label class="col-2 col-form-label" for="partid">Part <span class="text-danger">*</span></label>
-<div class="col-10"><input class="form-control borderred" id="name" name="name" placeholder="Part" type="text" /></div>
+<div class="col-10"><input class="form-control borderred" id="ddlPart" name="ddlPart" placeholder="Part" type="text" /></div>
 </div>
 
 <div class="form-group row"><img alt="Arrow for Required" class="arrowrequired yeararrow d-none" src="images/arrow.png" /> <label class="col-2 col-form-label" for="yearid">Year <span class="text-danger">*</span></label>
-<div class="col-10"><input class="form-control borderred" id="name" name="name" placeholder="Year" type="text" /></div>
+<div class="col-10"><input class="form-control borderred" id="ddlYear" name="ddlYear" placeholder="Year" type="text" /></div>
 </div>
 
 </div>
@@ -78,27 +78,27 @@
 <div class="col-md-6 col-sm-12 float-left">
 <div class="form-group row"><span class="namearrow custarrows d-none"><img alt="Arrow for Required" class="arrowrequired2  mbl" src="images/arrow.png" /> <img alt="Arrow for Required" class="arrowrequiredrght dsk" src="images/arrow-right.png" /> </span> <label class="col-2 col-form-label" for="name">Name <span class="text-danger">*</span></label>
 
-<div class="col-10"><input class="form-control borderred" id="name" name="name" placeholder="Enter Name" type="text" /></div>
+<div class="col-10"><input class="form-control borderred" id="txtName" name="txtName" placeholder="Enter Name" type="text" /></div>
 </div>
 
 <div class="form-group row"><span class="custphonearrow custarrows d-none"><img alt="Arrow for Required" class="arrowrequired2 mbl" src="images/arrow.png" /> <img alt="Arrow for Required" class="arrowrequiredrght dsk" src="images/arrow-right.png" /> </span> <label class="col-2 col-form-label" for="phone">Phone <span class="text-danger">*</span></label>
 
-<div class="col-10"><input class="form-control borderred" id="phone" name="phone" onblur="jm_phonemask(this);" placeholder="Enter Phone" type="tel" /></div>
+<div class="col-10"><input class="form-control borderred" id="txtMobile" name="txtMobile" onblur="jm_phonemask(this);" placeholder="Enter Phone" type="tel" /></div>
 </div>
 
 <div class="form-group row"><span class="custemailarrow custarrows d-none"><img alt="Arrow for Required" class="arrowrequired2 mbl" src="images/arrow.png" /> <img alt="Arrow for Required" class="arrowrequiredrght dsk" src="images/arrow-right.png" /> </span> <label class="col-2 col-form-label" for="email">Email <span class="text-danger">*</span></label>
 
-<div class="col-10"><input class="form-control borderred" id="email" name="email" placeholder="Enter Email" type="text" /></div>
+<div class="col-10"><input class="form-control borderred" id="txtMail" name="txtMail" placeholder="Enter Email" type="text" /></div>
 </div>
 
 <div class="form-group row"><span class="custziparrow custarrows  d-none"><img alt="Arrow for Required" class="arrowrequired2  mbl" src="images/arrow.png" /> <img alt="Arrow for Required" class="arrowrequiredrght dsk" src="images/arrow-right.png" /> </span> <label class="col-2 col-form-label" for="zip">Zip <span class="text-danger">*</span></label>
 
-<div class="col-10"><input class="form-control borderred" id="zip" name="zip" placeholder="Enter Zip/Postal Code" type="text" /></div>	
+<div class="col-10"><input class="form-control borderred" id="txtZip" name="txtZip" placeholder="Enter Zip/Postal Code" type="text" /></div>	
 </div>
 	
-	<input type="hidden" id="note" name="note" value="Note : This email and all of the information within is property of the direct recipient only and may not be
-																	distributed to or shared with any other party. The recipient also is bound by richdogpartlocator.com LLC terms of service.
-																	Violators will be permanently removed from our services">
+<input type="hidden" id="note" name="note" value="Note : This email and all of the information within is property of the direct recipient only and may not be
+		distributed to or shared with any other party. The recipient also is bound by richdogpartlocator.com LLC terms of service.
+		Violators will be permanently removed from our services">
 
 <div class="form-group row">
 <div class="col-md-10 offset-md-2 col-sm-12 text-right"><input class="input" id="optionno" name="optionno" type="hidden" /><button class="btn btn-custom red-border" type="submit" value="submit">Find My Part Now</button></div>

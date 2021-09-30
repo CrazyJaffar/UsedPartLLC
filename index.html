@@ -4750,10 +4750,8 @@
 						var note = $('#note').val();
 
 						// var body = $('#body').val();
-
-						var Body = '<b><u>Details</u></b> <br><br><b>Year</b>: ' + year + '<br><br><b>Make</b>: ' + makemodel + '<br><br><b>Part</b>: ' + part + '<br> <br><b>CONTACT INFORMATION </b> <br><br><b>Name</b>: ' + name + '<br><br><b>Email</b>: ' + email + '<br><br><b>Phone Number</b>: ' + phone + '<br><br><b>zip code</b>: ' + zipcode + '<br><br><br><br>' + note;
-						console.log(name, phone, email, makemodel, zipcode, year, part);
-
+var Body = '<b>Details</b>:<br><br><b>Year</b>: ' + year + '<br><br><b>Make/Model</b>: ' + makemodel + '<br><br><b>Part</b>: ' + part + '<br> <br><b>CONTACT INFORMATION </b> <br><br><b>Name</b>: ' + name + '<br><br><b>Email</b>: ' + email + '<br><br><b>Phone Number</b>: ' + phone + '<br><br><b>zip code</b>: ' + zipcode + '<br><br><br><br>' + note;
+console.log(name, phone, email, zipcode, year, makemodel, part);
 						Email.send({
 							Host: "smtp.gmail.com",
 							Username: 'richdogpartlocator@gmail.com',

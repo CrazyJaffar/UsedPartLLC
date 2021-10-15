@@ -4768,13 +4768,18 @@
 						alert('Part has been requested successfully.');
 					}
 					else {
-						console.error(message);
-						alert('There is error at Requesting Part. ');
+						console.log("message");
+					console.log(message)
+						
 
 					}
 
 				}
 			);
+			.catch(err=>{
+				console.log("err")
+				console.log(err)
+			})
 
 
 

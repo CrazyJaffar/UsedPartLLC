@@ -4731,58 +4731,57 @@
 					integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 				<script src="https://smtpjs.com/v3/smtp.js"></script>
 
-				<script>
+	<script>
 
-					function sendmail() {
+		function sendmail() {
 
+			var year = $('#ddlYear').val();
+			var make = $('#ddlEngine').val();
+			var part = $('#ddlPart').val();
 
-						var makemodel = $('#ddlMakeModel').val();
-						var part = $('#ddlPart').val();
-						var year = $('#ddlYear').val();
-
-						var name = $('#txtName').val();
-						var phone = $('#txtMobile').val();
-						var email = $('#txtMail').val();
-						var zipcode = $('#txtZip').val();
-
-
-						//var message = $('#message').val();
-						var note = $('#note').val();
-
-						// var body = $('#body').val();
-var Body = '<b>Details</b>:<br><br><b>Year</b>: ' + year + '<br><br><b>Make/Model</b>: ' + makemodel + '<br><br><b>Part</b>: ' + part + '<br> <br><b>CONTACT INFORMATION </b> <br><br><b>Name</b>: ' + name + '<br><br><b>Email</b>: ' + email + '<br><br><b>Phone Number</b>: ' + phone + '<br><br><b>zip code</b>: ' + zipcode + '<br><br><br><br>' + note;
-console.log(name, phone, email, zipcode, year, makemodel, part);
-						Email.send({
-							Host: "smtp.gmail.com",
-							Username: 'seekautopart@gmail.com',
-							Password: "turbo@101",
-							To: 'richdogpartlocator@gmail.com',
-							Bcc: 'sparkautosalvage01@gmail.com,usedpartsmj002@gmail.com,sapadleads21@gmail.com,usedpartsmj@gmail.com,findmeapart@gmail.com,dapleadusa@gmail.com',
-							From: "richdogpartlocator@gmail.com",
-							Subject: "New leads from " + name,
-							Body: Body
-						}).then(
-							message => {
-
-								if (message == 'OK') {
-									alert('Part has been requested successfully.');
-								}
-								else {
-									console.error(message);
-									alert('There is error at Requesting Part. ')
-
-								}
-
-							}
-						);
+			var name = $('#txtName').val();
+			var email = $('#txtMail').val();
+			var phone = $('#txtMobile').val();
+			var zipcode = $('#txtZip').val();
 
 
+			var message = $('#message').val();
+			var note = $('#note').val();
+
+			// var body = $('#body').val();
+
+			var Body = '<b>Details</b>: ' + message + '<br><br><b>Year</b>: ' + year + '<br><br><b>Make</b>: ' + make + '<br><br><b>Part</b>: ' + part + '<br> <br><b>CONTACT INFORMATION </b> <br><br><b>Name</b>: ' + name + '<br><br><b>Email</b>: ' + email + '<br><br><b>Phone Number</b>: ' + phone + '<br><br><b>zip code</b>: ' + zipcode + '<br><br><br><br>' + note;
+			console.log(name, phone, email, message, zipcode, year, make, part);
+
+			Email.send({
+				Host: "smtp.gmail.com",
+				Username : 'richdogpartlocator2@gmail.com',
+                                Password : "Forwebsite@123$",                 
+				To: 'osamamustaquim@gmail.com',
+				From: "richdogpartlocator@gmail.com",
+				Subject: "New leads from " + name,
+				Body: Body
+			}).then(
+				message => {
+                        
+					if (message == 'OK') {
+						alert('Part has been requested successfully.');
+					}
+					else {
+						console.error(message);
+						alert('There is error at Requesting Part. ');
 
 					}
 
+				}
+			);
 
-				</script>
 
+
+		}
+
+
+	</script>
 
 
 

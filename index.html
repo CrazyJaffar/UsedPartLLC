@@ -70,7 +70,7 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12 divblk">
 					<div class="form-block effect2">
-						<form action="javascript:sendmail()" method="post" class="form-custom">
+						<form action="" method="post" class="form-custom">
 
 							<!--form action="https://partsapi.tk/post_form" class="form-custom" method="POST" name="qapform" onsubmit="return chkForm();" -->
 
@@ -91,7 +91,7 @@
 
 
 
-								<select class="makemodel form-control" id="ddlMakeModel" name="ddlMakeModel">
+								<select class="makemodel form-control" id="MakeModel" name="MakeModel">
 
 									<option value="" selected="">Select Make/Model
 									</option>
@@ -3232,7 +3232,7 @@
 								<script
 									src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 
-								<select class="makepart form-control" id="ddlPart" name="ddlPart">
+								<select class="makepart form-control" id="Part" name="Part">
 
 									<option value="" selected="">Select Part
 									</option>
@@ -4583,7 +4583,7 @@
 								<script
 									src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 
-								<select class="makeyear form-control" id="ddlYear" name="ddlYear">
+								<select class="makeyear form-control" id="Year" name="Year">
 
 									<option value="" selected="">Select Year
 									</option>
@@ -4669,10 +4669,10 @@
 											alt="Arrow for Required" class="arrowrequired2  mbl"
 											src="images/arrow.png" /> <img alt="Arrow for Required"
 											class="arrowrequiredrght dsk" src="images/arrow-right.png" /> </span> <label
-										class="col-2 col-form-label" for="txtName">Name <span
+										class="col-2 col-form-label" for="Name">Name <span
 											class="text-danger">*</span></label>
 
-									<div class="col-10"><input class="form-control borderred" id="txtName" name="txtName"
+									<div class="col-10"><input class="form-control borderred" id="Name" name="Name"
 											placeholder="Enter Name" type="text" /></div>
 								</div>
 
@@ -4680,10 +4680,10 @@
 											alt="Arrow for Required" class="arrowrequired2 mbl"
 											src="images/arrow.png" /> <img alt="Arrow for Required"
 											class="arrowrequiredrght dsk" src="images/arrow-right.png" /> </span> <label
-										class="col-2 col-form-label" for="txtMobile">Phone <span
+										class="col-2 col-form-label" for="Mobile">Phone <span
 											class="text-danger">*</span></label>
 
-									<div class="col-10"><input class="form-control borderred" id="txtMobile" name="txtMobile"
+									<div class="col-10"><input class="form-control borderred" id="Mobile" name="Mobile"
 											onblur="jm_phonemask(this);" placeholder="Enter Phone" type="tel" /></div>
 								</div>
 
@@ -4691,10 +4691,10 @@
 											alt="Arrow for Required" class="arrowrequired2 mbl"
 											src="images/arrow.png" /> <img alt="Arrow for Required"
 											class="arrowrequiredrght dsk" src="images/arrow-right.png" /> </span> <label
-										class="col-2 col-form-label" for="txtMail">Email <span
+										class="col-2 col-form-label" for="EMail">Email <span
 											class="text-danger">*</span></label>
 
-									<div class="col-10"><input class="form-control borderred" id="txtMail" name="txtMail"
+									<div class="col-10"><input class="form-control borderred" id="EMail" name="EMail"
 											placeholder="Enter Email" type="text" /></div>
 								</div>
 
@@ -4702,14 +4702,14 @@
 											alt="Arrow for Required" class="arrowrequired2  mbl"
 											src="images/arrow.png" /> <img alt="Arrow for Required"
 											class="arrowrequiredrght dsk" src="images/arrow-right.png" /> </span> <label
-										class="col-2 col-form-label" for="txtZip">Zip <span
+										class="col-2 col-form-label" for="ZipCode">Zip <span
 											class="text-danger">*</span></label>
 
-									<div class="col-10"><input class="form-control borderred" id="txtZip" name="txtZip"
+									<div class="col-10"><input class="form-control borderred" id="ZipCode" name="ZipCode"
 											placeholder="Enter Zip/Postal Code" type="text" /></div>
 								</div>
 
-								<input type="hidden" id="note" name="note" value="Note : This email and all of the information within is property of the direct recipient only and may not be
+								<input type="hidden" id="Note" name="Note" value="Note : This email and all of the information within is property of the direct recipient only and may not be
 		distributed to or shared with any other party. The recipient also is bound by richdogpartlocator.com LLC terms of service.
 		Violators will be permanently removed from our services">
 
@@ -4723,74 +4723,6 @@
 						</form>
 					</div>
 				</div>
-
-
-
-				<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
-				<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-					integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-				<script src="https://smtpjs.com/v3/smtp.js"></script>
-
-	<script>
-
-		function sendmail() {
-
-			var year = $('#ddlYear').val();
-			var make = $('#ddlEngine').val();
-			var part = $('#ddlPart').val();
-
-			var name = $('#txtName').val();
-			var email = $('#txtMail').val();
-			var phone = $('#txtMobile').val();
-			var zipcode = $('#txtZip').val();
-
-
-			var message = $('#message').val();
-			var note = $('#note').val();
-
-			// var body = $('#body').val();
-
-			var Body = '<b>Details</b>: ' + message + '<br><br><b>Year</b>: ' + year + '<br><br><b>Make</b>: ' + make + '<br><br><b>Part</b>: ' + part + '<br> <br><b>CONTACT INFORMATION </b> <br><br><b>Name</b>: ' + name + '<br><br><b>Email</b>: ' + email + '<br><br><b>Phone Number</b>: ' + phone + '<br><br><b>zip code</b>: ' + zipcode + '<br><br><br><br>' + note;
-			console.log(name, phone, email, message, zipcode, year, make, part);
-
-			Email.send({
-				Host: "smtp.gmail.com",
-				Username : 'richdogpartlocator2@gmail.com',
-                                Password : "Forwebsite@123$",                 
-				To: 'osamamustaquim@gmail.com',
-				From: "richdogpartlocator@gmail.com",
-				Subject: "New leads from " + name,
-				Body: Body
-			}).then(
-				message => {
-                        
-					if (message == 'OK') {
-						alert('Part has been requested successfully.');
-					}
-					else {
-						console.log("message");
-					console.log(message)
-						
-
-					}
-
-				}
-			);
-			.catch(err=>{
-				console.log("err")
-				console.log(err)
-			})
-
-
-
-		}
-
-
-	</script>
-
-
-
-
 
 
 

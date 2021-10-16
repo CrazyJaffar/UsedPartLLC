@@ -73,6 +73,11 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12 divblk">
 					<div class="form-block effect2">
+						
+						<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+							onload="if(submitted) {window.location='https://usedpartllc.us/'}">
+						</iframe>
+						
 						<form id="submit-form" action="" class="form-custom">
 							
 							<div class="col-md-6 col-sm-12 float-left">
@@ -4828,13 +4833,12 @@
                 data:$("#submit-form").serialize(),
                 method:"post",
                 success:function (response){
-                    alert("Form submitted successfully")
-                    window.location.reload()
-                    window.location.href="https://usedpartllc.us/"
+                    alert("Form submitted successfully");
+                    window.location.reload();
+                    window.location.href="https://usedpartllc.us/";
                 },
                 error:function (err){
-                    alert("Something Error")
-    
+                    alert("Something Error");    
                 }
             })
         })

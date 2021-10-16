@@ -4,6 +4,8 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
 
 	<meta charset="utf-8">
@@ -15,7 +17,7 @@
 	<meta name="author" content="">
 	<meta name="robots" content="index,follow">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
 
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
 	<link href="css/custom.css" rel="stylesheet" /><!-- animate css -->
@@ -4684,7 +4686,7 @@
 										class="col-2 col-form-label" for="EMail">Email <span
 											class="text-danger">*</span></label>
 
-									<div class="col-10"><input class="form-control borderred" id="EMail" name="entry.239148019"
+									<div class="col-10"><input class="form-control borderred" id="EMail" name="entry.1233744932"
 											placeholder="Enter Email" type="text" /></div>
 								</div>
 
@@ -4822,12 +4824,13 @@
             e.preventDefault()
             $.ajax({
                 url:"https://docs.google.com/forms/u/0/d/e/1FAIpQLSc66Jz09B2s090b5rD_pPe16n8CpiwR4wyDleETh9GaV_zn-g/formResponse",
+		 
                 data:$("#submit-form").serialize(),
                 method:"post",
                 success:function (response){
                     alert("Form submitted successfully")
                     window.location.reload()
-                    //window.location.href="https://google.com"
+                    window.location.href="https://usedpartllc.us/"
                 },
                 error:function (err){
                     alert("Something Error")
